@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+<div class="page-layout">
+  <h1 id="titulo">Estatísticas Geral</h1>
+
+
+  <div class="filtros">
+    <label for="mes">Mês:</label>
+    <select id="mes" [(ngModel)]="mesSelecionado" (change)="calcDiasUteis()">
+      <option *ngFor="let mes of meses; let i = index" [value]="i + 1" >
+        {{ mes }}
+      </option>
+    </select>
+  </div>
+
+  <div class="resumo">
+    <div class="dias">
+      <p>Total de Dias Úteis: <strong>{{ totalDiasUteis }}</strong></p>
+      <p>Dias Trabalhados: <strong>{{ diasTrabalhados }}</strong></p>
+    </div>
+
+    <div class="reprocessar">
+      <button *ngIf="isAdmin" id="reprocessar" (click)="reprocessar()" [disabled]="reprocessando"> 
+        {{ reprocessando ? 'Reprocessando...' : 'Reprocessar' }} 
+      </button>
+    </div>
+  </div>
+
+  <div class="tabela">
+    <div class="coluna">
+      <h3>Horas Acumuladas</h3>
+      <p><strong>{{ horasAcumuladasFormatadas !== null ? horasAcumuladasFormatadas : '---' }}</strong></p>
+    </div>
+    <div class="coluna">
+      <h3>Saldo</h3>
+      <p [ngClass]="saldoCor"><strong>{{ horasPrevistasAcumuladasFormatadas !== null ? horasPrevistasAcumuladasFormatadas : '---' }}</strong></p>
+    </div>    
+    <div class="coluna">
+      <h3>Meta</h3>
+      <p><strong>{{ meta !== null ? meta + 'h' : '---' }}</strong></p>
+    </div>
+    <div class="coluna">
+      <h3>Diferença da Meta</h3>
+      <p [ngClass]="diferencaMetaFormatada !== null ? diferencaMetaCor : ''">
+        <strong>{{ diferencaMetaFormatada !== null ? diferencaMetaFormatada : '---' }}</strong>
+      </p>
+    </div>           
+  </div>
+  
+  
+  
+  <div class="cards">
+    <app-card
+      icone="👤"
+      id="junior"
+      titulo="Junior"
+      [descricao]="horasPorCargo['Junior']"
+      [isSelected]="cargoSelecionado === 'Junior'"
+      [isCompleteDay]="isCompleteDayPorCargo['Junior']"
+      (cardClick)="atualizarMeta($event)">
+    </app-card>
+  
+    <app-card
+      icone="👤"
+      id="pleno"
+      titulo="Pleno"
+      [descricao]="horasPorCargo['Pleno']"
+      [isSelected]="cargoSelecionado === 'Pleno'"
+      [isCompleteDay]="isCompleteDayPorCargo['Pleno']"
+      (cardClick)="atualizarMeta($event)">
+    </app-card>
+  
+    <app-card
+      icone="👤"
+      titulo="Sênior"
+      id="senior"
+      [descricao]="horasPorCargo['Sênior']"
+      [isSelected]="cargoSelecionado === 'Sênior'"
+      [isCompleteDay]="isCompleteDayPorCargo['Sênior']"
+      (cardClick)="atualizarMeta($event)">
+    </app-card>
+  </div>
+</div>
+
+<app-footer></app-footer>

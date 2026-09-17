@@ -1,0 +1,6 @@
+<div class="card" [ngClass]="{ 'selected': isSelected, 'card-incompleto': !isCompleteDay }" (click)="onClick()">
+    <div class="icone">{{ icone }}</div>
+    <h4>{{ titulo }}</h4>
+    <p>{{ descricao }}</p>
+</div>
+  

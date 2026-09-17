@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="page-layout">
+  <h1 class="titulo">Painel de horas </h1>
+  
+  <div class="cards-reports">
+     <!-- <app-card2
+        id="card-reports-select"
+        *ngFor="let card of dadosAPI"
+        icone="👤"
+        [isSelected]="true">
+     </app-card2> -->
+    <app-dashboard-item
+      *ngFor="let item of dadosAPI"
+      [item]="item"
+      [cargoSelecionado]="cargoSelecionado"
+      [isAdmin]="isAdmin"
+      (cardClick)="atualizarMeta($event)">
+    </app-dashboard-item>
+
+  </div>
+</div>

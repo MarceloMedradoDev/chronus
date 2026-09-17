@@ -1,0 +1,12 @@
+  <app-card2
+    icone="👤"
+    [nome]="item.data?.name"
+    [titulo]="item.data?.role"
+    [descricao]="item.data?.totalHours"
+    [isSelected]="cargoSelecionado === item.data?.role"
+    [isAdmin]="isAdmin"
+    [isCompleteDay]="item.data?.isCompleteDay ?? true"
+    (cardClick)="atualizarMeta($event)">
+  </app-card2>
+
+

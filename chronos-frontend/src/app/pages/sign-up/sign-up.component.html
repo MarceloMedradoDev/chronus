@@ -1,0 +1,35 @@
+<div class="signup-container">
+  <h2>Criar conta</h2>
+
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+
+    <div class="form-group">
+      <label>Nome:</label>
+      <input type="text" formControlName="name" placeholder="Seu nome" />
+    </div>
+
+    <div class="form-group">
+      <label>Matrícula:</label>
+      <input type="text" formControlName="registration" placeholder="Insira a matrícula" />
+    </div>
+
+    <div class="form-group">
+      <label>Senha:</label>
+      <input type="password" formControlName="password" placeholder="Mínimo 8 caracteres" />
+    </div>
+
+    <div class="form-group">
+      <label>Confirmar senha:</label>
+      <input type="password" formControlName="confirmPassword" placeholder="Repita sua senha" />
+    </div>
+
+    <button type="submit" [disabled]="loading || signUpForm.invalid">
+      {{ loading ? 'Cadastrando...' : 'Cadastrar' }}
+    </button>
+
+  </form>
+</div>

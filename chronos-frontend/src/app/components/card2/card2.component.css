@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+#p-icon {
+  margin-bottom: 0px;
+}
+
+#p-nome {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+#total-horas {
+  margin-bottom: 0px;
+}
+
+.dash {
+  width: 95%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo-card {
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.card2 {
+  background-color: #ffffff;
+  margin-left: 10px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: 85%;
+  height: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  align-items: center;
+  max-height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.card2:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.card2:active {
+  border-color: #00BFB8;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+.card2:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card2:focus {
+  outline: none;
+}
+
+
+.card2 .icone {
+  font-size: 4rem; /* antes: 2rem */
+  margin-bottom: 1rem;
+}
+
+.card2 h4 {
+  font-size: 2.4rem; /* antes: 1.2rem */
+  color: #00BFB8;
+  margin-bottom: 1rem;
+}
+
+.card2 p {
+  font-size: 2rem; /* antes: 0.95rem */
+  color: #333;
+  font-weight: bold;
+}
+
+.card2.selected2 {
+  border: 3px solid #00BFB8;
+}
+
+.card-incompleto {
+  background-color: #ffebee;
+  border: 2px solid #e53935;
+  box-shadow: 0 0 8px rgba(229, 57, 53, 0.35);
+}
+
+@media(min-width: 1280px){
+  .card2{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
+}

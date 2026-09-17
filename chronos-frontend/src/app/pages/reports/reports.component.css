@@ -1,0 +1,31 @@
+.page-layout {
+    width: 100vw;
+}
+
+#cardselect {
+    background-color: red;
+}
+
+.titulo {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 4rem); /* Responsivo: mínimo 2rem, máximo 4rem */
+    font-weight: 600;
+    color: #00BFB8;
+    margin-bottom: 2rem;
+}
+
+.cards-reports {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.7rem;
+}
+
+@media(min-width: 1280px){
+    .cards-reports {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.7rem;
+}
+}

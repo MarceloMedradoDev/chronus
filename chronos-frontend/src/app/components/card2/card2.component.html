@@ -1,0 +1,18 @@
+<div
+  class="card2"
+  [class.card-incompleto]="!isCompleteDay"
+  (click)="onClick()">
+
+  <div class="nome" *ngIf="isAdmin">
+    <p id="p-nome">{{ nome }}</p>
+  </div>
+
+  <h4 id="titulo-card">{{ titulo }}</h4>
+
+  <p id="total-horas">{{ descricao }}</p>
+
+  <div class="dash">
+    <canvas width="10px" height="200" #chartCanvas></canvas>
+  </div>
+
+</div>

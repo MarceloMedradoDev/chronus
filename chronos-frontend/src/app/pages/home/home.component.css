@@ -1,0 +1,168 @@
+/* Layout geral da página */
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* opcional */
+    text-align: center;
+  }
+  
+  /* Título */
+  #titulo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #00BFB8;
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  
+  /* Parágrafo */
+  #paragrafo {
+    position: relative;
+    bottom: 160px; /* valor negativo sobe o elemento */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    color: #000000;
+    width: 1150px;
+    text-align: justify;
+    margin-bottom: 6rem;
+
+
+  }
+  
+  /* Botão */
+  .button-container {
+    margin-bottom: 2rem;
+  }
+  
+  .custom-button {
+    width: 264%;
+    max-width: 360px;
+    height: 66px;
+    background-color: #00bfa5;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    position: relative;
+    bottom: 280px;
+    right: 100px;   
+    
+  }
+  .custom-button-1 {
+    width: 264%;
+    max-width: 360px;
+    height: 66px;
+    background-color: #00bfa5;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    position: relative;
+    margin-top: 30px;
+    bottom: 280px;
+    right: 100px;   
+  }
+  
+  .custom-button:hover {
+    background-color: #00a18c;
+  }
+
+  .custom-button-1:hover {
+    background-color: #00a18c;
+  }
+  
+  @media (min-width: 1280px) {
+
+    .page-layout {
+    min-height: 100vh;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 0fr);
+    gap: 10px;
+    place-items: center;
+  }
+
+    #titulo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #00BFB8;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+    
+    #paragrafo {
+    position: static;
+    bottom: 160px; /* valor negativo sobe o elemento */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+    color: #000000;
+    width: 90%;
+    text-align: justify;
+    margin-bottom: 0;
+    }
+
+    .button-container {
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .custom-button {
+    width: 264%;
+    max-width: 360px;
+    height: 66px;
+    background-color: #00bfa5;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    position: static;
+    bottom: 0px;
+    right: 0px;   
+    
+  }
+  .custom-button-1 {
+    width: 264%;
+    max-width: 360px;
+    height: 66px;
+    background-color: #00bfa5;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    position: static;
+    margin-top: 30px;
+    bottom: 0;
+    right: 0;   
+  }
+  }

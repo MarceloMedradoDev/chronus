@@ -1,0 +1,92 @@
+.footer {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* PARTE 1 */
+#parte1 {
+  background-color: #54595F;
+  padding: 30px 5%;
+  color: #FFFFFF;
+}
+
+#parte1 .titulo {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#parte1 .grid-unidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#parte1 .unidade {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#parte1 .unidade strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#parte1 a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* PARTE 2 */
+#parte2 {
+  background-color: #1A1A1A;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 5%;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  #parte2 {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 78px;
+  }
+}
+
+#rodape-info {
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+#botao {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  background-color: #1E1E1E;
+  border: 1px solid #2C2C2C;
+  padding: 14px 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#botao:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}

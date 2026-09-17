@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Workspace\\Chronos\\chronos-selenium\\chronos-selenium\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5C26B3-8D5F-439D-5903-4BAE41E7C3EC}|chronos-selenium.csproj|c:\\workspace\\chronos\\chronos-selenium\\chronos-selenium\\selenium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5C26B3-8D5F-439D-5903-4BAE41E7C3EC}|chronos-selenium.csproj|solutionrelative:selenium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Selenium.cs",
+              "DocumentMoniker": "C:\\Workspace\\Chronos\\chronos-selenium\\chronos-selenium\\Selenium.cs",
+              "RelativeDocumentMoniker": "Selenium.cs",
+              "ToolTip": "C:\\Workspace\\Chronos\\chronos-selenium\\chronos-selenium\\Selenium.cs",
+              "RelativeToolTip": "Selenium.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwDQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T18:23:11.95Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

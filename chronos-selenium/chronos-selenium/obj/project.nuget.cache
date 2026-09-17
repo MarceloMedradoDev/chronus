@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AQeUi0+phWs=",
+  "success": true,
+  "projectFilePath": "C:\\Workspace\\Chronos\\chronos-selenium\\chronos-selenium\\chronos-selenium.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ana Sys - CX\\.nuget\\packages\\selenium.webdriver\\4.47.0\\selenium.webdriver.4.47.0.nupkg.sha512"
+  ],
+  "logs": []
+}

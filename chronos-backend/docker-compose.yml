@@ -1,0 +1,57 @@
+services:
+  # ==========================================
+  # BACKEND (.NET)
+  # ==========================================
+  backend:
+    build:
+      context: ./chronos-backend/Chronos
+      dockerfile: Dockerfile
+    container_name: chronos-backend
+    ports:
+      - "5000:8080"                # Porta que a API vai expor
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - JWT_SECRET_KEY="JHD7812hd91HSA8192hdsu812HSAU812!!aAjsd92182jsd82h1jsAJS12hs81j2"
+      - JWT_ISSUER=Chronos.Api
+      - JWT_AUDIENCE=Chronos.Client
+      - DB_CONNECTION=Server=DELL7000\TESTE;Database=Chronos;User Id=sa;Password=job2026;TrustServerCertificate=True;
+      - AUTH_PM_LOGIN=03589823593
+      - AUTH_PM_PASS=Sistemas@99
+    networks:
+      - chronos-net
+
+  # ==========================================
+  # FRONTEND (Angular + Nginx)
+  # ==========================================
+  frontend:
+    build:
+      context: ./chronos-frontend  # Caminho para a pasta do frontend
+      dockerfile: Dockerfile
+    container_name: chronos-frontend
+    ports:
+      - "4200:80"                  # Expõe o Angular na porta 4200 mapeando para a porta 80 do Nginx
+    environment:
+      - API_URL=http://backend:8080/api # Exemplo se o Nginx injetar em runtime
+    depends_on:
+      - backend
+    networks:
+      - chronos-net
+
+  # ==========================================
+  # SELENIUM (Para testes E2E)
+  # ==========================================
+  selenium:
+    image: selenium/standalone-chrome:latest
+    container_name: chronos-selenium
+    ports:
+      - "4444:4444"                # Porta padrão do WebDriver do Selenium
+    shm_size: 2gb                  # Recomendado para evitar travamentos do Chrome em containers
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - chronos-net
+
+networks:
+  chronos-net:
+    driver: bridge
